@@ -15,14 +15,15 @@ clicked.addEventListener('click',()=>{
         res.innerHTML+=`Number ${val} is bigger than the one.<br>`;
     }
     else{
-        alert("you won");
         res.innerHTML="Congo U are Winner!!";
+        alert("<--Your Guess is Right-->");
         res.style.fontSize='2rem';
     }
     entry.value="";
 }
 else{
     alert(" Please enter a number in range 0 to 100 ");
+    entry.value="";
 }
 })
 reset.addEventListener("click",()=>{
