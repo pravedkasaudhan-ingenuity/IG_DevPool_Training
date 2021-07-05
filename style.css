@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+#navbar{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 300px;
+
+}
+#navlist{
+    display: flex;
+    background-color: rgb(157, 212, 248);
+}
+.navigation{
+    list-style-type: none;
+}
+.link{
+    display: block;
+    padding: 16px 50px;
+    text-decoration:none;
+}
+a:hover{
+font-size: 1.5rem;
+}
+#liimg{
+    width:50px;
+}
+
+.card{
+    border:1px solid rgb(13, 136, 236);
+    border-radius: 10px;
+    margin:70px 10%;
+    padding:15px;
+}
+#home_img{
+    background: url("./images/background.jpg")no-repeat center center/cover ;
+    padding:40px;
+    border-radius: 30px;
+}
+#profile_pic{
+    /* display: block; */
+    /* margin:10px auto; */
+    width: 20%;
+    border:3px solid black;
+    border-radius: 100px;
+}
+#profile_pic:hover{
+    border: 10px solid yellow;
+    width: 35%;
+    
+}
+#home_intro{
+    padding-top: 20px;
+    padding-left:20px;
+    padding-right:20px;
+    text-align: justify;
+    display: flex;
+}
+.det_l{
+    width:80%;
+    padding-left: 20px;
+    padding-right: 60px;
+
+}
+.det_r{
+    font-size: 1.3rem;
+}
+#home{
+    /* margin-top: 60px; */
+}
+#about{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#experience{
+    padding-left: 3%;
+}
+#skills{
+    padding-left: 3%;
+}
+#education{
+    padding-left: 3%;
+}
+#interests{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#about_intro{
+    text-align: justify;
+    padding:10px 20px;
+}
+.exp{
+    display: flex;
+    padding: 40px;
+}
+.exp_title{
+    font-weight: bolder;
+}
+.exp_image{
+    width:120%;
+    height:auto;
+}
+.x{
+    
+    width:200px;
+    height:auto;
+}
+.exp_det{
+padding:10px 100px;
+}
+.edu{
+    display: flex;
+    padding: 20px 40px;
+}
+.edu_title{
+    font-weight: bolder;
+}
+.edu_image{
+    width:12%;
+    height: auto;
+    margin:0px 30px;
+}
+.edu_det{
+padding:10px 140px;
+}
+#skill_all{
+    padding-left: 10%;
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.sk{
+    padding:5px;
+    font-weight: bold;
+    font-style: italic;
+}
+#interest_all{
+    padding:20px 10%;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.it{
+    width:100%;
+    height:auto;
+    padding:20px 50px;
+}
+.it>img{
+width:100%;
+}
+
+#foot{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.7rem;
+}
