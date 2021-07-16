@@ -24,7 +24,6 @@ button.addEventListener('click',function(){
     sound.opening.play();
 });
 begin.start();
-// motion();
 sound.loading.play();
 sound.loading.muted=false;
 

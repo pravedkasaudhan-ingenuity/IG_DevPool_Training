@@ -19,8 +19,6 @@ export class game {
     start() {
        
         this.sound=new Sound();
-        // this.sound.load();
-        
         this.blockCollection = []
         blocksSet[this.level-1].forEach((blockSet, index) => {
             for (let r = 0; r < blockSet.rows; r++) {
@@ -76,7 +74,6 @@ export class game {
         }
     }
     keyrelease(ev) {
-        //  console.log('key released');
         switch (ev.code) {
             case "ArrowLeft":
             case "ArrowRight":
@@ -108,9 +105,7 @@ export class game {
         this.paddle.update();
         this.ball.update();
         if (this.paddle.hitandturn(this.ball)) {
-            //  console.log("hit occured");
             this.ball.turnUp();
-            // this.ball.color = `rgb(${Math.random() * 250},${Math.random() * 150},${Math.random() * 250})`;
             this.sound.paddlehit.play();
         }
         this.blockCollection.forEach(block => {
@@ -138,9 +133,6 @@ export class game {
         this.start();
         }
         if (!this.ball.living) {
-            // this.gameover.gameover=true;
-            // if(this.lives>0)
-            // setTimeout(()=>this.lives--,5000);
             this.lives--;
             if (this.lives == 0 ) {
                 this.gameover.gameover = true;
@@ -149,7 +141,6 @@ export class game {
             }
             this.paddle.living = false;
             this.playing = false;
-            // this.reset();
             setTimeout(this.reset.bind(this), 5000);
         }
        

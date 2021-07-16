@@ -14,8 +14,6 @@ export class ball {
         this.sound = new Sound();
     }
     bounce() {
-        // this.speedX=10;
-        // this.speedY=-(Math.random()*10);
         if (this.moving) {
             this.speedX = 3;
             this.speedY = -3;
@@ -46,7 +44,7 @@ export class ball {
         }
     }
     draw(ctx) {
-        // console.log("circle drawn");
+    
         if (this.living) {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
