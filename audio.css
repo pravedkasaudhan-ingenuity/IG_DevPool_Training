@@ -10,10 +10,8 @@
     display:flex;
     justify-content: space-around;
     height: 100vh;
-    /* background: url(./ts/images/bg1.jpg) no-repeat center center/cover; */
 }
 #player{
-    /* margin:20px; */
     margin-left: 50px;
     padding: 20px ;
     border: 2px solid red;
@@ -32,10 +30,8 @@
     margin:20px auto;
     width:300;
     height:300px;
-    /* border:10px solid black; */
     border-radius: 200px;
     animation: rotation 9000ms linear infinite;
-    /* box-shadow:  0px 0px 10px 10px red ; */
     
 }
 @keyframes rotation {
@@ -60,7 +56,6 @@
     border-radius: 30px;
 }
 #playlist{
-    /* margin:20px; */
     padding:10px;
     border:2px solid red;
     border-radius: 30px;
@@ -93,18 +88,14 @@
     
     border-radius: 50px;
     border:0px solid white;
-    /* background-color: yellow; */
     margin:0px 5px;
 }
 .song_control{
-    /* width:40px; */
     height: 50px;
     border-radius: 50px;
 }
 audio{
-    /* visibility: hidden; */
     display: none;
-    /* display: block; */
     margin: auto;
 }
 .queue{
@@ -134,7 +125,6 @@ audio{
     background-color: rgb(21, 180, 243);
 }
 #runningBar{
-    /* padding:2px ; */
     border:2px solid green;
     border-radius: 10px;
     margin:5px auto;

@@ -2,14 +2,14 @@ export var playlist = [
     {
     title: "PAANI PAANI BY BADSHA",
     href: {
-        song: "./mp3/song1.mp3",
+        song: "mp3/song1.mp3",
         image: "images/song-i1.jpg"
     }
 },
     {
     title: "HELLO",
     href: {
-        song: "./mp3/song2.mp3",
+        song: "mp3/song2.mp3",
         image: "images/song-i2.jpg"
     }
 },
@@ -25,13 +25,6 @@ export var playlist = [
     href: {
         song: "mp3/song4.mp3",
         image: "images/song-i4.jpg"
-    }
-},
-    {
-    title: "TITLI SONG",
-    href: {
-        song: "https://quz1yp-a.akamaihd.net/downloads/ringtones/files/mp3/tainu-jaandi-na-jaani-ve-eh-duniya-54388.mp3",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb9vOXWulCMhX6iqTaCZme0SIV8CmhUiBs-Q&usqp=CAU"
     }
 },
 {
@@ -58,4 +51,3 @@ export var playlist = [
 
 
 ];
-// export=playlist;
