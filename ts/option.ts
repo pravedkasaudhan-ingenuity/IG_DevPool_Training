@@ -2,7 +2,7 @@ import { country } from "./data";
 import { addData } from "./table";
 import { graph} from "./graph";
 
-export function addCountry() {
+export function addCountry():void {
     let op = document.getElementById("options");
     country().then(data => {
         let x = data.response;

@@ -1,5 +1,5 @@
 // getting countries
-export async function country() {
+export async function country(){
     const a = await fetch("https://covid-193.p.rapidapi.com/countries", {
         "method": "GET",
         "headers": {

@@ -1,6 +1,6 @@
 import { data } from "./data";
 
-export function addData(country?) {
+export function addData(country?) :void{
     const table = document.getElementById("data") as HTMLTableElement;
     let head = `<tr id="head">
 	<th class="headings">Country</th>

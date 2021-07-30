@@ -6,7 +6,7 @@ let cases_list: Array<number> = [];
 let recovered_list: Array<number> = [];
 let deaths_list: Array<number> = [];
 let formatedDates = [];
-async function calling(country) {
+async function calling(country){
     await fetch(
         "https://api.covid19api.com/total/country/" + country + "/status/confirmed",
         {
@@ -18,10 +18,7 @@ async function calling(country) {
             return res.json();
         })
         .then((data) => {
-            // console.log(data);
             data.forEach((entry) => {
-                // console.log(entry);
-
                 dates.push(entry.Date);
                 cases_list.push(entry.Cases);
             });
@@ -61,7 +58,7 @@ async function calling(country) {
 
 };
 
-export function graph(country) {
+export function graph(country):void {
     dates = [];
     recovered_list = [];
     cases_list = [];
@@ -91,7 +88,7 @@ let my_chart;
 let can = document.getElementById('display_chart') as HTMLCanvasElement;
 
 let ctx = can.getContext('2d');
-function axesLinearChart() {
+function axesLinearChart():void {
     can.style.display = 'block';
     can.style.backgroundColor = 'white';
     document.querySelector('h2').style.display="block";
