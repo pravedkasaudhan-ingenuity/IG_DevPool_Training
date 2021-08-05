@@ -69,7 +69,7 @@ export class Game {
         this.ending.addChild(welcome);
     }
     createcards() {
-        allcards.forEach((data) => {
+        shuffleCards(allcards).forEach((data) => {
             const card = new DrawCard('cover', { id: 'cardfront', frame: data });
             card.interactive = true;
             card.on('click', () => {
