@@ -394,6 +394,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./initial/css/style.css":
+/*!*********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./initial/css/style.css ***!
+  \*********************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/images/game.png */ \"./initial/assets/images/game.png\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(___CSS_LOADER_URL_IMPORT_0___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"#updater{\\r\\ndisplay: flex;\\r\\njustify-content: space-between;\\r\\n}\\r\\nbody{\\r\\n    background-color: red;\\r\\n    background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\r\\n}\\r\\ncanvas{\\r\\n    display: block;\\r\\n    margin:0px auto;\\r\\n    /* width: 70% */\\r\\n    /* height: 54vh; */\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://pixisetup/./initial/css/style.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (cssWithMappingToString) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join(\"\");\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === \"string\") {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, \"\"]];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\n//# sourceURL=webpack://pixisetup/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // eslint-disable-next-line no-param-reassign\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n\n\n  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    // eslint-disable-next-line no-param-reassign\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    // eslint-disable-next-line no-param-reassign\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack://pixisetup/./node_modules/css-loader/dist/runtime/getUrl.js?");
+
+/***/ }),
+
 /***/ "./node_modules/earcut/src/earcut.js":
 /*!*******************************************!*\
   !*** ./node_modules/earcut/src/earcut.js ***!
@@ -416,36 +449,14 @@ eval("\n\nvar has = Object.prototype.hasOwnProperty\n  , prefix = '~';\n\n/**\n 
 
 /***/ }),
 
-/***/ "./initial/assets/images/img1.jpg":
+/***/ "./initial/assets/images/game.png":
 /*!****************************************!*\
-  !*** ./initial/assets/images/img1.jpg ***!
+  !*** ./initial/assets/images/game.png ***!
   \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"assets/images/img1.jpg\");\n\n//# sourceURL=webpack://pixisetup/./initial/assets/images/img1.jpg?");
-
-/***/ }),
-
-/***/ "./initial/assets/images/img2.jpg":
-/*!****************************************!*\
-  !*** ./initial/assets/images/img2.jpg ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"assets/images/img2.jpg\");\n\n//# sourceURL=webpack://pixisetup/./initial/assets/images/img2.jpg?");
-
-/***/ }),
-
-/***/ "./initial/assets/images/img3.jpg":
-/*!****************************************!*\
-  !*** ./initial/assets/images/img3.jpg ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"assets/images/img3.jpg\");\n\n//# sourceURL=webpack://pixisetup/./initial/assets/images/img3.jpg?");
+eval("module.exports = __webpack_require__.p + \"299df2cc155776780aa7.png\";\n\n//# sourceURL=webpack://pixisetup/./initial/assets/images/game.png?");
 
 /***/ }),
 
@@ -602,6 +613,83 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./initial/css/style.css":
+/*!*******************************!*\
+  !*** ./initial/css/style.css ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ \"./node_modules/style-loader/dist/runtime/styleDomAPI.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertBySelector.js */ \"./node_modules/style-loader/dist/runtime/insertBySelector.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ \"./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ \"./node_modules/style-loader/dist/runtime/insertStyleElement.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ \"./node_modules/style-loader/dist/runtime/styleTagTransform.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./style.css */ \"./node_modules/css-loader/dist/cjs.js!./initial/css/style.css\");\n\n      \n      \n      \n      \n      \n      \n      \n      \n      \n\nvar options = {};\n\noptions.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());\noptions.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());\n\n      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, \"head\");\n    \noptions.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());\noptions.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());\n\nvar update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__.default, options);\n\n\n\n\n       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__.default && _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__.default.locals ? _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__.default.locals : undefined);\n\n\n//# sourceURL=webpack://pixisetup/./initial/css/style.css?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\nvar stylesInDom = [];\n\nfunction getIndexByIdentifier(identifier) {\n  var result = -1;\n\n  for (var i = 0; i < stylesInDom.length; i++) {\n    if (stylesInDom[i].identifier === identifier) {\n      result = i;\n      break;\n    }\n  }\n\n  return result;\n}\n\nfunction modulesToDom(list, options) {\n  var idCountMap = {};\n  var identifiers = [];\n\n  for (var i = 0; i < list.length; i++) {\n    var item = list[i];\n    var id = options.base ? item[0] + options.base : item[0];\n    var count = idCountMap[id] || 0;\n    var identifier = \"\".concat(id, \" \").concat(count);\n    idCountMap[id] = count + 1;\n    var index = getIndexByIdentifier(identifier);\n    var obj = {\n      css: item[1],\n      media: item[2],\n      sourceMap: item[3]\n    };\n\n    if (index !== -1) {\n      stylesInDom[index].references++;\n      stylesInDom[index].updater(obj);\n    } else {\n      stylesInDom.push({\n        identifier: identifier,\n        updater: addStyle(obj, options),\n        references: 1\n      });\n    }\n\n    identifiers.push(identifier);\n  }\n\n  return identifiers;\n}\n\nfunction addStyle(obj, options) {\n  var api = options.domAPI(options);\n  api.update(obj);\n  return function updateStyle(newObj) {\n    if (newObj) {\n      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {\n        return;\n      }\n\n      api.update(obj = newObj);\n    } else {\n      api.remove();\n    }\n  };\n}\n\nmodule.exports = function (list, options) {\n  options = options || {};\n  list = list || [];\n  var lastIdentifiers = modulesToDom(list, options);\n  return function update(newList) {\n    newList = newList || [];\n\n    for (var i = 0; i < lastIdentifiers.length; i++) {\n      var identifier = lastIdentifiers[i];\n      var index = getIndexByIdentifier(identifier);\n      stylesInDom[index].references--;\n    }\n\n    var newLastIdentifiers = modulesToDom(newList, options);\n\n    for (var _i = 0; _i < lastIdentifiers.length; _i++) {\n      var _identifier = lastIdentifiers[_i];\n\n      var _index = getIndexByIdentifier(_identifier);\n\n      if (stylesInDom[_index].references === 0) {\n        stylesInDom[_index].updater();\n\n        stylesInDom.splice(_index, 1);\n      }\n    }\n\n    lastIdentifiers = newLastIdentifiers;\n  };\n};\n\n//# sourceURL=webpack://pixisetup/./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
+  \********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\nvar memo = {};\n/* istanbul ignore next  */\n\nfunction getTarget(target) {\n  if (typeof memo[target] === \"undefined\") {\n    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself\n\n    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n      try {\n        // This will throw an exception if access to iframe is blocked\n        // due to cross-origin restrictions\n        styleTarget = styleTarget.contentDocument.head;\n      } catch (e) {\n        // istanbul ignore next\n        styleTarget = null;\n      }\n    }\n\n    memo[target] = styleTarget;\n  }\n\n  return memo[target];\n}\n/* istanbul ignore next  */\n\n\nfunction insertBySelector(insert, style) {\n  var target = getTarget(insert);\n\n  if (!target) {\n    throw new Error(\"Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.\");\n  }\n\n  target.appendChild(style);\n}\n\nmodule.exports = insertBySelector;\n\n//# sourceURL=webpack://pixisetup/./node_modules/style-loader/dist/runtime/insertBySelector.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
+  \**********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\n/* istanbul ignore next  */\nfunction insertStyleElement(options) {\n  var style = document.createElement(\"style\");\n  options.setAttributes(style, options.attributes);\n  options.insert(style);\n  return style;\n}\n\nmodule.exports = insertStyleElement;\n\n//# sourceURL=webpack://pixisetup/./node_modules/style-loader/dist/runtime/insertStyleElement.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\n/* istanbul ignore next  */\nfunction setAttributesWithoutAttributes(style) {\n  var nonce =  true ? __webpack_require__.nc : 0;\n\n  if (nonce) {\n    style.setAttribute(\"nonce\", nonce);\n  }\n}\n\nmodule.exports = setAttributesWithoutAttributes;\n\n//# sourceURL=webpack://pixisetup/./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
+  \***************************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\n/* istanbul ignore next  */\nfunction apply(style, options, obj) {\n  var css = obj.css;\n  var media = obj.media;\n  var sourceMap = obj.sourceMap;\n\n  if (media) {\n    style.setAttribute(\"media\", media);\n  } else {\n    style.removeAttribute(\"media\");\n  }\n\n  if (sourceMap && typeof btoa !== \"undefined\") {\n    css += \"\\n/*# sourceMappingURL=data:application/json;base64,\".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), \" */\");\n  } // For old IE\n\n  /* istanbul ignore if  */\n\n\n  options.styleTagTransform(css, style);\n}\n\nfunction removeStyleElement(style) {\n  // istanbul ignore if\n  if (style.parentNode === null) {\n    return false;\n  }\n\n  style.parentNode.removeChild(style);\n}\n/* istanbul ignore next  */\n\n\nfunction domAPI(options) {\n  var style = options.insertStyleElement(options);\n  return {\n    update: function update(obj) {\n      apply(style, options, obj);\n    },\n    remove: function remove() {\n      removeStyleElement(style);\n    }\n  };\n}\n\nmodule.exports = domAPI;\n\n//# sourceURL=webpack://pixisetup/./node_modules/style-loader/dist/runtime/styleDomAPI.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
+  \*********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\n  if (style.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    while (style.firstChild) {\n      style.removeChild(style.firstChild);\n    }\n\n    style.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://pixisetup/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
+
+/***/ }),
+
 /***/ "./initial/src/Game.ts":
 /*!*****************************!*\
   !*** ./initial/src/Game.ts ***!
@@ -609,7 +697,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.Game = void 0;\r\nconst pixi_js_1 = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.js\");\r\nconst preloader_1 = __webpack_require__(/*! ./preloader */ \"./initial/src/preloader.ts\");\r\nconst assets_1 = __importDefault(__webpack_require__(/*! ./assets */ \"./initial/src/assets.ts\"));\r\nconst texture_1 = __webpack_require__(/*! ./texture */ \"./initial/src/texture.ts\");\r\nclass Game {\r\n    constructor(app) {\r\n        this.index = 2;\r\n        this.app = app;\r\n        this.stage = app.stage;\r\n        this.message = this.createText(\"hello\", this.app.view.width / 2, this.app.view.height / 2, 0.5);\r\n        this.fps = this.createText(\"\", 0, 0, 0);\r\n        preloader_1.preloader(assets_1.default, () => {\r\n            this.image1 = this.createSprite(texture_1.selectTexture('i1'), this.app.view.width / 2, this.app.view.height / 2);\r\n        });\r\n    }\r\n    createText(entry, x, y, a) {\r\n        let text = new pixi_js_1.Text(entry);\r\n        text.position.set(x, y);\r\n        text.anchor.set(a);\r\n        return this.stage.addChild(text);\r\n    }\r\n    createSprite(texture, x, y) {\r\n        let img = pixi_js_1.Sprite.from(texture);\r\n        img.position.set(x, y);\r\n        img.anchor.set(0.5);\r\n        return this.stage.addChild(img);\r\n    }\r\n    animate() {\r\n        this.fps.text = pixi_js_1.Ticker.shared.FPS.toFixed(2);\r\n        this.message.y += 1;\r\n        if (this.message.y > this.app.view.height) {\r\n            this.message.y = 0;\r\n        }\r\n        if (this.image1) {\r\n            this.image1.x += 3;\r\n            if (this.image1.x == this.app.view.width) {\r\n                if (this.index > 3) {\r\n                    this.index = 1;\r\n                }\r\n                this.image1.texture = texture_1.selectTexture(`i${this.index}`);\r\n                this.index++;\r\n                this.image1.x = 0;\r\n            }\r\n        }\r\n    }\r\n}\r\nexports.Game = Game;\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/Game.ts?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.Game = void 0;\r\nconst pixi_js_1 = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.js\");\r\nconst preloader_1 = __webpack_require__(/*! ./preloader */ \"./initial/src/preloader.ts\");\r\nconst assets_1 = __importDefault(__webpack_require__(/*! ./assets */ \"./initial/src/assets.ts\"));\r\nconst food_1 = __webpack_require__(/*! ./food */ \"./initial/src/food.ts\");\r\nconst snake_1 = __webpack_require__(/*! ./snake */ \"./initial/src/snake.ts\");\r\nconst texture_1 = __webpack_require__(/*! ./texture */ \"./initial/src/texture.ts\");\r\nclass Game {\r\n    // timer:number=20000;\r\n    constructor(app) {\r\n        this.index = 1;\r\n        this.app = app;\r\n        this.stage = app.stage;\r\n        this.food_radi = 10;\r\n        this.fps = this.createText(\"CLICK TO START THE GAME\", this.app.view.width / 2, 15, 0.5);\r\n        preloader_1.preloader(assets_1.default, () => {\r\n            this.starting = this.createSprite(texture_1.selectTexture('i2'), this.app.view.width / 2, this.app.view.height / 2);\r\n            this.starting.scale.set(1.1, 1.2);\r\n            this.starting.interactive = true;\r\n            this.starting.addListener('click', () => {\r\n                if (this.starting)\r\n                    this.starting.visible = false;\r\n                this.bg1 = this.createBorder(0, 0, this.app.view.width, this.app.view.height, 0xeefee);\r\n                this.bg2 = this.createBorder(20, 20, this.app.view.width - 40, this.app.view.height - 40, 0xFF0000);\r\n                this.bg3 = this.createBorder(20, 50, this.app.view.width - 40, this.app.view.height - 70, 0xa);\r\n                this.score = this.createText(\"\", 30, 20, 0);\r\n                this.timer = this.createText(\"\", this.app.view.width - 200, 20, 0);\r\n                setInterval(() => {\r\n                    food_1.timeUpdate();\r\n                }, 1000);\r\n                this.food = food_1.FOOD(this.app, this.food_radi);\r\n            });\r\n        });\r\n    }\r\n    events(e) {\r\n        console.log(e);\r\n        console.log(this.vert, this.hori);\r\n        if (this.vert && (e.code == \"ArrowLeft\" || e.code == \"ArrowRight\")) {\r\n            clearInterval(this.vert);\r\n            this.vert = undefined;\r\n        }\r\n        if (this.hori && (e.code == \"ArrowUp\" || e.code == \"ArrowDown\")) {\r\n            clearInterval(this.hori);\r\n            this.hori = undefined;\r\n        }\r\n        if (this.hori == undefined) {\r\n            if (e.code == 'ArrowLeft') {\r\n                this.direction = 'left';\r\n                snake_1.addBlock(-30, 0);\r\n                this.hori = Number(setInterval(() => snake_1.move(), 300));\r\n            }\r\n            if (e.code == 'ArrowRight') {\r\n                this.direction = 'right';\r\n                snake_1.addBlock(30, 0);\r\n                this.hori = Number(setInterval(() => snake_1.move(), 300));\r\n            }\r\n        }\r\n        if (this.vert == undefined) {\r\n            if (e.code == 'ArrowDown') {\r\n                this.direction = 'down';\r\n                snake_1.addBlock(0, 30);\r\n                this.vert = Number(setInterval(() => snake_1.move(), 300));\r\n            }\r\n            if (e.code == 'ArrowUp') {\r\n                this.direction = 'up';\r\n                snake_1.addBlock(0, -30);\r\n                this.vert = Number(setInterval(() => snake_1.move(), 300));\r\n            }\r\n        }\r\n    }\r\n    createGameOver() {\r\n        if (snake_1.gameOver()) {\r\n            this.app.ticker.stop();\r\n            let text = this.createSprite(texture_1.selectTexture('gameover'), this.app.view.width / 2, this.app.view.height / 2);\r\n            text.scale.set(2, 1.2);\r\n            this.stage.removeChildren();\r\n            return this.stage.addChild(text);\r\n        }\r\n    }\r\n    createText(entry, x, y, a) {\r\n        let text = new pixi_js_1.Text(entry);\r\n        text.position.set(x, y);\r\n        text.anchor.set(a);\r\n        return this.stage.addChild(text);\r\n    }\r\n    createBorder(x, y, w, h, color) {\r\n        let bord = new pixi_js_1.Graphics();\r\n        bord.beginFill(color);\r\n        bord.drawRect(x, y, w, h);\r\n        bord.endFill();\r\n        return this.stage.addChild(bord);\r\n    }\r\n    createSprite(texture, x, y) {\r\n        let img = pixi_js_1.Sprite.from(texture);\r\n        img.position.set(x, y);\r\n        img.anchor.set(0.5);\r\n        return this.stage.addChild(img);\r\n    }\r\n    animate() {\r\n        var _a;\r\n        if (this.score)\r\n            this.score.text = \"Score :- \" + food_1.points;\r\n        if (this.timer)\r\n            this.timer.text = \"Time Left :- \" + food_1.time;\r\n        if (this.food) {\r\n            if (this.index <= 50) {\r\n                this.food_radi += 0.3;\r\n                this.food.destroy();\r\n                this.food = food_1.FOOD(this.app, this.food_radi);\r\n                this.index++;\r\n            }\r\n            else if (this.index <= 100) {\r\n                this.food_radi -= 0.3;\r\n                this.food.destroy();\r\n                this.food = food_1.FOOD(this.app, this.food_radi);\r\n                this.index++;\r\n            }\r\n            if (this.index > 100) {\r\n                this.index = 1;\r\n                this.food.destroy();\r\n                this.food = food_1.FOOD(this.app, this.food_radi);\r\n            }\r\n        }\r\n        if (this.snake) {\r\n            this.snake.destroy();\r\n        }\r\n        if (((_a = this.starting) === null || _a === void 0 ? void 0 : _a.visible) == false) {\r\n            this.snake = snake_1.drawSnake(this.app);\r\n            this.createGameOver();\r\n        }\r\n        if (this.food)\r\n            food_1.snake_eaten_food();\r\n    }\r\n}\r\nexports.Game = Game;\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/Game.ts?");
 
 /***/ }),
 
@@ -620,7 +708,18 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    baseurl: \"./assets/images/\",\r\n    data: [\r\n        {\r\n            key: \"i1\",\r\n            img: \"img1.jpg\"\r\n        },\r\n        {\r\n            key: \"i2\",\r\n            img: \"img2.jpg\"\r\n        },\r\n        {\r\n            key: \"i3\",\r\n            img: \"img3.jpg\"\r\n        },\r\n    ]\r\n};\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/assets.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    baseurl: \"./assets/images/\",\r\n    data: [\r\n        {\r\n            key: \"i1\",\r\n            img: \"snake_game.png\"\r\n        },\r\n        {\r\n            key: \"i2\",\r\n            img: \"game.png\"\r\n        },\r\n        {\r\n            key: \"gameover\",\r\n            img: \"gameover.jpg\"\r\n        }\r\n    ]\r\n};\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/assets.ts?");
+
+/***/ }),
+
+/***/ "./initial/src/food.ts":
+/*!*****************************!*\
+  !*** ./initial/src/food.ts ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.timeUpdate = exports.snake_eaten_food = exports.FOOD = exports.food_Position = exports.y = exports.x = exports.time = exports.points = void 0;\r\nconst pixi_js_1 = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.js\");\r\nconst snake_1 = __webpack_require__(/*! ./snake */ \"./initial/src/snake.ts\");\r\nexports.points = 0;\r\nexports.time = 20;\r\nlet can;\r\nlet radius;\r\nexports.x = 100;\r\nexports.y = 100;\r\nfunction food_Position(app, radi) {\r\n    radius = radi;\r\n    exports.x = 40 + Math.floor(Math.random() * (app.view.width - 80));\r\n    exports.y = 90 + Math.floor(Math.random() * (app.view.height - 120));\r\n    return FOOD(app, radi);\r\n}\r\nexports.food_Position = food_Position;\r\nfunction FOOD(app, radi) {\r\n    can = app;\r\n    let food = new pixi_js_1.Graphics();\r\n    food.beginFill(0xff00f, 1);\r\n    food.lineStyle(0xa, 0.1, 0.4);\r\n    food.drawCircle(exports.x, exports.y, radi);\r\n    food.endFill();\r\n    return app.stage.addChild(food);\r\n}\r\nexports.FOOD = FOOD;\r\nfunction snake_eaten_food() {\r\n    let dis = Math.sqrt(Math.pow(Math.abs(snake_1.snake[0].x - exports.x), 2) + Math.pow(Math.abs(snake_1.snake[0].y - exports.y), 2));\r\n    if (dis < 25) {\r\n        const audio = document.querySelector(\"audio\");\r\n        audio.src = '../assets/audio/jump.wav';\r\n        audio.play();\r\n        exports.points++;\r\n        exports.time = 20;\r\n        snake_1.eat_and_grow();\r\n        console.log(\"eaten\");\r\n        food_Position(can, radius);\r\n    }\r\n}\r\nexports.snake_eaten_food = snake_eaten_food;\r\nfunction timeUpdate() {\r\n    exports.time--;\r\n    if (exports.time < 0) {\r\n        const audio = document.querySelector(\"audio\");\r\n        audio.src = '../assets/audio/food.wav';\r\n        audio.play();\r\n        exports.time = 20;\r\n        food_Position(can, radius);\r\n    }\r\n}\r\nexports.timeUpdate = timeUpdate;\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/food.ts?");
 
 /***/ }),
 
@@ -631,7 +730,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst pixi_js_1 = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.js\");\r\nconst Game_1 = __webpack_require__(/*! ./Game */ \"./initial/src/Game.ts\");\r\n__webpack_require__(/*! ../assets/images/img1.jpg */ \"./initial/assets/images/img1.jpg\");\r\n__webpack_require__(/*! ../assets/images/img2.jpg */ \"./initial/assets/images/img2.jpg\");\r\n__webpack_require__(/*! ../assets/images/img3.jpg */ \"./initial/assets/images/img3.jpg\");\r\nconst canvas = document.getElementById(\"canvas\");\r\nconst app = new pixi_js_1.Application({\r\n    view: canvas,\r\n    width: innerWidth,\r\n    height: innerHeight,\r\n    backgroundColor: 0xeeffee,\r\n    sharedTicker: true,\r\n    sharedLoader: true\r\n});\r\nconst task = new Game_1.Game(app);\r\napp.ticker.add(task.animate.bind(task));\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/main.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst pixi_js_1 = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.js\");\r\nconst Game_1 = __webpack_require__(/*! ./Game */ \"./initial/src/Game.ts\");\r\n__webpack_require__(/*! ../css/style.css */ \"./initial/css/style.css\");\r\nconst audio = document.createElement(\"audio\");\r\naudio.style.visibility = 'none';\r\ndocument.body.append(audio);\r\nconst canvas = document.getElementById(\"canvas\");\r\nconst app = new pixi_js_1.Application({\r\n    view: canvas,\r\n    width: innerWidth * 0.91,\r\n    height: innerHeight * 0.96,\r\n    backgroundColor: 0xC1D579,\r\n    sharedTicker: true,\r\n    sharedLoader: true\r\n});\r\naddEventListener('resize', () => {\r\n    app.view.width = innerWidth * 0.91;\r\n    app.view.height = innerHeight * 0.96;\r\n    location.reload();\r\n});\r\nconst task = new Game_1.Game(app);\r\napp.ticker.add(task.animate.bind(task));\r\nwindow.addEventListener('keydown', task.events.bind(task));\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/main.ts?");
 
 /***/ }),
 
@@ -642,7 +741,18 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.preloader = void 0;\r\nconst pixi_js_1 = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.js\");\r\nconst texture_1 = __webpack_require__(/*! ./texture */ \"./initial/src/texture.ts\");\r\nfunction preloader(list, xyz) {\r\n    const loader = pixi_js_1.Loader.shared;\r\n    if (list.baseurl) {\r\n        loader.baseUrl = list.baseurl;\r\n    }\r\n    (list.data).forEach((ele) => {\r\n        // console.log(ele);\r\n        loader.add(ele.key, ele.img);\r\n    });\r\n    loader.load();\r\n    loader.onProgress.add(load_inProgress);\r\n    loader.onComplete.add(() => { loadComplete(loader, xyz); });\r\n    console.log(loader);\r\n    return loader;\r\n}\r\nexports.preloader = preloader;\r\nlet bar;\r\nfunction load_inProgress(e) {\r\n    if (bar == undefined) {\r\n        bar = document.createElement(\"div\");\r\n        bar.id = \"loaderBar\";\r\n        bar.style.height = '10px';\r\n        bar.style.backgroundColor = 'green';\r\n    }\r\n    console.log(e.progress, \"% loaded\");\r\n    bar.style.width = `${e.progress}%`;\r\n    document.body.append(bar);\r\n}\r\nfunction loadComplete(l, xyz) {\r\n    console.log(\"loader\", l.resources);\r\n    console.log(\"texture\", texture_1.loadtexture(l.resources));\r\n    xyz();\r\n}\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/preloader.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.preloader = void 0;\r\nconst pixi_js_1 = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.js\");\r\nconst texture_1 = __webpack_require__(/*! ./texture */ \"./initial/src/texture.ts\");\r\nfunction preloader(list, xyz) {\r\n    const loader = pixi_js_1.Loader.shared;\r\n    if (list.baseurl) {\r\n        loader.baseUrl = list.baseurl;\r\n    }\r\n    (list.data).forEach((ele) => {\r\n        // console.log(ele);\r\n        loader.add(ele.key, ele.img);\r\n    });\r\n    loader.load();\r\n    loader.onProgress.add(load_inProgress);\r\n    loader.onComplete.add(() => { loadComplete(loader, xyz); });\r\n    console.log(loader);\r\n    return loader;\r\n}\r\nexports.preloader = preloader;\r\nlet dd = document.getElementById('loader');\r\nlet bar;\r\nfunction load_inProgress(e) {\r\n    if (bar == undefined) {\r\n        bar = document.createElement(\"div\");\r\n        bar.id = \"loaderBar\";\r\n        bar.style.height = '10px';\r\n        bar.style.backgroundColor = 'green';\r\n    }\r\n    console.log(e.progress, \"% loaded\");\r\n    bar.style.width = `${e.progress}%`;\r\n    dd.append(bar);\r\n}\r\nfunction loadComplete(l, xyz) {\r\n    console.log(\"loader\", l.resources);\r\n    console.log(\"texture\", texture_1.loadtexture(l.resources));\r\n    xyz();\r\n}\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/preloader.ts?");
+
+/***/ }),
+
+/***/ "./initial/src/snake.ts":
+/*!******************************!*\
+  !*** ./initial/src/snake.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.gameOver = exports.eat_and_grow = exports.move = exports.addBlock = exports.fillCircle = exports.drawSnake = exports.snake = void 0;\r\nconst pixi_js_1 = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.js\");\r\nlet dx;\r\nlet dy;\r\nexports.snake = [{ x: 400, y: 100 }];\r\nlet can;\r\nlet container;\r\nfunction drawSnake(app) {\r\n    container = new pixi_js_1.Container();\r\n    can = app;\r\n    exports.snake.forEach((block) => {\r\n        fillCircle(block.x, block.y);\r\n    });\r\n    return app.stage.addChild(container);\r\n}\r\nexports.drawSnake = drawSnake;\r\nfunction fillCircle(x, y) {\r\n    let cir = new pixi_js_1.Graphics();\r\n    cir.beginFill(0xeeffaa);\r\n    cir.lineStyle(0xa, 0.1, 0.1);\r\n    cir.drawCircle(x, y, 15);\r\n    cir.endFill();\r\n    container.addChild(cir);\r\n}\r\nexports.fillCircle = fillCircle;\r\nfunction addBlock(x, y) {\r\n    dx = x;\r\n    dy = y;\r\n}\r\nexports.addBlock = addBlock;\r\nfunction move() {\r\n    const head = {\r\n        x: exports.snake[0].x + dx,\r\n        y: exports.snake[0].y + dy\r\n    };\r\n    exports.snake.unshift(head);\r\n    exports.snake.pop();\r\n}\r\nexports.move = move;\r\nfunction eat_and_grow() {\r\n    const head = {\r\n        x: exports.snake[0].x + dx,\r\n        y: exports.snake[0].y + dy\r\n    };\r\n    exports.snake.unshift(head);\r\n}\r\nexports.eat_and_grow = eat_and_grow;\r\nfunction gameOver() {\r\n    const audio = document.querySelector(\"audio\");\r\n    for (let i = 1; i < exports.snake.length; i++) {\r\n        if (exports.snake[i].x == exports.snake[0].x && exports.snake[i].y == exports.snake[0].y) {\r\n            audio.src = '../assets/audio/gameover.wav';\r\n            audio.play();\r\n            return true;\r\n        }\r\n    }\r\n    if (exports.snake[0].x < 25 || exports.snake[0].y < 50 || exports.snake[0].x > can.view.width - 20 || exports.snake[0].y > can.view.height - 20) {\r\n        audio.src = '../assets/audio/gameover.wav';\r\n        audio.play();\r\n        return true;\r\n    }\r\n}\r\nexports.gameOver = gameOver;\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/snake.ts?");
 
 /***/ }),
 
@@ -653,7 +763,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.selectTexture = exports.loadtexture = void 0;\r\nlet texture = {};\r\nfunction loadtexture(res) {\r\n    const keys = Object.keys(res);\r\n    console.log(keys);\r\n    keys.forEach(ele => {\r\n        // console.log(res[ele], ele);\r\n        // console.log(res[ele].texture);\r\n        texture[ele] = res[ele].texture;\r\n        // console.log(texture[ele]);\r\n    });\r\n    // texture=loader.resources('xyz').texture\r\n    // console.log(texture);\r\n    return texture;\r\n}\r\nexports.loadtexture = loadtexture;\r\nfunction selectTexture(id) {\r\n    if (id in texture) {\r\n        console.log(\"selected\", texture[id], \"selected\");\r\n        return texture[id];\r\n    }\r\n    return null;\r\n}\r\nexports.selectTexture = selectTexture;\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/texture.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.selectTexture = exports.loadtexture = void 0;\r\nlet texture = {};\r\nfunction loadtexture(res) {\r\n    const keys = Object.keys(res);\r\n    console.log(keys);\r\n    keys.forEach(ele => {\r\n        texture[ele] = res[ele].texture;\r\n    });\r\n    return texture;\r\n}\r\nexports.loadtexture = loadtexture;\r\nfunction selectTexture(id) {\r\n    if (id in texture) {\r\n        console.log(\"selected\", texture[id], \"selected\");\r\n        return texture[id];\r\n    }\r\n    return null;\r\n}\r\nexports.selectTexture = selectTexture;\r\n\n\n//# sourceURL=webpack://pixisetup/./initial/src/texture.ts?");
 
 /***/ }),
 
@@ -707,6 +817,9 @@ eval("\n\nmodule.exports = {\n  isString: function(arg) {\n    return typeof(arg
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
@@ -788,6 +901,32 @@ eval("\n\nmodule.exports = {\n  isString: function(arg) {\n    return typeof(arg
 /******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
 /******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
 /******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /************************************************************************/

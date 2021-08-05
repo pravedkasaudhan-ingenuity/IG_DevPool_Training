@@ -1,7 +1,6 @@
 const path=require('path');
-// const {CleanWebpackPlugin}=require('clean-webpack-plugin');
 const htmlplugin=require("html-webpack-plugin");
-// const copyplugin=require("copy-webpack-plugin");
+const copyplugin=require("copy-webpack-plugin");
 const webpack=require("webpack");
 
 module.exports={
@@ -23,7 +22,7 @@ module.exports={
         rules:[{
             test:/\.ts$/i,
             use:"ts-loader",
-            // exclude:/node_modules/
+            exclude:/node_modules/
         },
         {
             test:/\.css$/i,
@@ -35,7 +34,6 @@ module.exports={
                 options:{
                     name:'[name].[ext]',
                     outputPath:"./assets/images/",
-                    // publicPath:"./srcimages/",
                     userRelativePaths:true
                 }
             }
@@ -48,8 +46,11 @@ module.exports={
             filename:'index.html',
             inject:'body'
         }),
-        // new copyplugin(),
-        // new CleanWebpackPlugin()
+        new copyplugin({
+            patterns: [{
+            from: './initial/assets/',
+            to: './assets'
+        }]}),
         new webpack.ProgressPlugin()
     ]
 }

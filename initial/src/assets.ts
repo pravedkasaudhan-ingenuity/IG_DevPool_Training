@@ -3,15 +3,15 @@ baseurl:"./assets/images/",
 data:[
     {
         key:"i1",
-        img:"img1.jpg"
+        img:"snake_game.png"
     },
     {
         key:"i2",
-        img:"img2.jpg"
+        img:"game.png"
     },
     {
-        key:"i3",
-        img:"img3.jpg"
-    },
+        key:"gameover",
+        img:"gameover.jpg"
+    }
 ]
 }

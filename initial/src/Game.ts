@@ -2,7 +2,7 @@ import { Application, Container, Graphics, Resource, Sprite, Text, Texture, Tick
 
 import { preloader } from "./preloader";
 import list from './assets';
-import { FOOD, food_Position, snake_eaten_food, timeUpdate } from "./food";
+import { FOOD, food_Position, points, snake_eaten_food, time, timeUpdate } from "./food";
 import { drawSnake, gameOver, addBlock, move } from "./snake";
 import { selectTexture } from "./texture";
 export class Game {
@@ -17,23 +17,43 @@ export class Game {
     vert: number | undefined;
     hori: number | undefined;
     direction: string | undefined;
+    starting: Sprite | undefined;
+    bg1: Graphics | undefined;
+    bg2: Graphics | undefined;
+    bg3: Graphics | undefined;
+    score: Text | undefined;
+    timer: Text | undefined;
     // timer:number=20000;
     constructor(app: Application) {
         this.index = 1;
         this.app = app;
         this.stage = app.stage;
         this.food_radi = 10;
-        this.fps = this.createText("", 0, 0, 0);
+        
+        this.fps = this.createText("CLICK TO START THE GAME", this.app.view.width / 2, 15, 0.5);
         preloader(list, () => {
-            setInterval(() => {
-                timeUpdate();
-            }, 1000);
-            this.food = FOOD(this.app, this.food_radi)        
+            this.starting = this.createSprite(selectTexture('i2') as Texture, this.app.view.width / 2, this.app.view.height / 2);
+            this.starting.scale.set(1.1, 1.2);
+            this.starting.interactive = true;
+            this.starting.addListener('click', () => {
+                if (this.starting)
+                    this.starting.visible = false;
+
+                this.bg1 = this.createBorder(0, 0, this.app.view.width, this.app.view.height, 0xeefee);
+                this.bg2 = this.createBorder(20, 20, this.app.view.width - 40, this.app.view.height - 40, 0xFF0000);
+                this.bg3 = this.createBorder(20, 50, this.app.view.width - 40, this.app.view.height - 70, 0xa);
+                this.score = this.createText("", 30, 20, 0);
+                this.timer = this.createText("", this.app.view.width - 200, 20, 0);
+                setInterval(() => {
+                    timeUpdate();
+                }, 1000);
+                this.food = FOOD(this.app, this.food_radi)
+            });
         });
     }
     events(e: KeyboardEvent) {
         console.log(e);
-      
+
         console.log(this.vert, this.hori)
         if (this.vert && (e.code == "ArrowLeft" || e.code == "ArrowRight")) {
             clearInterval(this.vert);
@@ -47,42 +67,36 @@ export class Game {
             if (e.code == 'ArrowLeft') {
                 this.direction = 'left';
                 addBlock(-30, 0);
-                this.hori = Number(setInterval(() => move(), 200));
+                this.hori = Number(setInterval(() => move(), 300));
             }
             if (e.code == 'ArrowRight') {
                 this.direction = 'right';
                 addBlock(30, 0);
-                this.hori = Number(setInterval(() => move(), 200));
+                this.hori = Number(setInterval(() => move(), 300));
             }
         }
         if (this.vert == undefined) {
             if (e.code == 'ArrowDown') {
                 this.direction = 'down';
                 addBlock(0, 30);
-                this.vert = Number(setInterval(() => move(), 200));
+                this.vert = Number(setInterval(() => move(), 300));
             }
             if (e.code == 'ArrowUp') {
                 this.direction = 'up';
                 addBlock(0, -30);
-                this.vert = Number(setInterval(() => move(), 200));
+                this.vert = Number(setInterval(() => move(), 300));
             }
         }
 
     }
 
-    test() {
-        console.log("test called");
-        this.createGameOver();
-    }
-    createGameOver(): Text | undefined {
+    createGameOver(): Sprite | undefined {
         if (gameOver()) {
             this.app.ticker.stop();
-            let text = new Text("GAMEOVER");
-            text.x = this.app.view.width / 2;
-            text.y = this.app.view.height / 2;
-            text.anchor.set(0.5);
-            console.log(text);
+            let text = this.createSprite(selectTexture('gameover') as Texture, this.app.view.width / 2, this.app.view.height / 2);
+            text.scale.set(2, 1.2);
             this.stage.removeChildren();
+            document.querySelector("audio")
             return this.stage.addChild(text);
         }
     }
@@ -92,6 +106,13 @@ export class Game {
         text.anchor.set(a);
         return this.stage.addChild(text);
     }
+    createBorder(x: number, y: number, w: number, h: number, color: any): Graphics {
+        let bord = new Graphics();
+        bord.beginFill(color);
+        bord.drawRect(x, y, w, h);
+        bord.endFill();
+        return this.stage.addChild(bord);
+    }
     createSprite(texture: Texture<Resource>, x: number, y: number): Sprite {
         let img = Sprite.from(texture);
         img.position.set(x, y);
@@ -99,13 +120,11 @@ export class Game {
         return this.stage.addChild(img);
     }
     animate() {
-        this.fps.text = Ticker.shared.FPS.toFixed(0);
-        // console.log(this.index,this.food_radi);
-
-        // if(this.food){
-        //     this.food.destroy();
-        //     this.food = FOOD(this.app,this.food_radi);
-        // }
+        if (this.score)
+            this.score.text = "Score :- " + points;
+        if (this.timer)
+            this.timer.text = "Time Left :- " + time;
+     
         if (this.food) {
             if (this.index <= 50) {
                 this.food_radi += 0.3
@@ -130,10 +149,10 @@ export class Game {
         if (this.snake) {
             this.snake.destroy();
         }
-        this.snake = drawSnake(this.app);
-
-
-        this.createGameOver();
+        if (this.starting?.visible == false) {
+            this.snake = drawSnake(this.app);
+            this.createGameOver();
+        }
 
         if (this.food)
             snake_eaten_food();
