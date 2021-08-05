@@ -42,7 +42,6 @@ export class Game {
                 (this.starting as Container).visible = false;
                 (this.game as Container).visible = true;
                 this.audio.src = '../assets/audio/shuffling.mp3';
-                console.log(this.audio);
                 this.audio.play();
                 this.createcards();
             })
@@ -84,7 +83,6 @@ export class Game {
                     this.card2 = card
                     this.unactivatecards(false);
                     this.result();
-                    // setTimeout(() => this.result(), 3000);
                 }
                 else {
                     this.card1 = card;
@@ -103,7 +101,6 @@ export class Game {
         let index = 0;
         for (let i = 0; i < 5; i++) {
             for (let j = 0; j < 8; j++) {
-
                 let card = this.game.getChildAt(index);
                 card.x = j * (w + gap) + borderSide;
                 card.y = i * (h + gap) + borderTop;
@@ -115,19 +112,14 @@ export class Game {
         console.log("result called")
         if (this.card1 && this.card2) {
             if (this.card1.name == this.card2.name) {
-                console.log("won done");
-                // let audio=document.querySelector('audio')as HTMLAudioElement
                 this.audio.src = '../assets/audio/cardvanish.wav';
                 this.audio.play();
                 gsap.fromTo([this.card1, this.card2], { rotation: 0 }, {
                     x: this.app.view.width / 2,
                     y: this.app.view.height / 2,
-                    // width: this.card1.width * 20,
-                    // height: this.card1.height * 20,
                     rotation: DEG_TO_RAD * 360,
                     duration: 3,
                     onComplete: () => {
-
                         this.game.removeChild(this.card1 as DrawCard);
                         this.game.removeChild(this.card2 as DrawCard);
                         this.card1 = undefined;
@@ -135,8 +127,6 @@ export class Game {
                         this.unactivatecards(true);
                     }
                 })
-
-
             }
             else {
                 this.audio.src = '../assets/audio/cardspin.wav';
@@ -145,7 +135,6 @@ export class Game {
                     rotation: DEG_TO_RAD * 3600,
                     duration: 4,
                     ease: "bounce.out",
-                    // repeat:10,
                     onComplete: () => {
                         ((this.card1 as DrawCard).back as Sprite).visible = true;
                         ((this.card2 as DrawCard).back as Sprite).visible = true;
@@ -158,11 +147,10 @@ export class Game {
 
             }
         }
-        // this.unactivatecards(true);
+       
 
     }
     unactivatecards(value: boolean) {
-        console.log("unactivate card");
         this.game.children.forEach(child => child.interactive = value)
     }
     createText(entry: string, x: number, y: number, a: number): Text {
@@ -190,7 +178,6 @@ export class Game {
             if(this.endtone==0){
             let audio=document.createElement('audio')as HTMLAudioElement
             audio.src = '../assets/audio/win.wav';
-            console.log(audio);
             audio.style.visibility='none';
             document.body.append(audio);
             audio.play();

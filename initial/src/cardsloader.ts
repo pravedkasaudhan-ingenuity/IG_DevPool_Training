@@ -41,7 +41,6 @@ export class DrawCard extends Container{
         super();
         this.front=this.createCard(this.getfrontImgFromSpriteSheet(frontImg));
         this.back=this.createCard(selectTexture(backImg)as Texture);
-        console.log(this.front,this.back);
         this.name=frontImg.frame.name;
     }
     createCard(texture:Texture):Sprite{
@@ -49,13 +48,11 @@ export class DrawCard extends Container{
         img.anchor.set(0.5);
         img.width=2*C_width;
         img.height=2*C_height;
-        // img.position.set(img.width/2,img.height/2);
         return this.addChild(img);
     }
     getfrontImgFromSpriteSheet(detail:cardFront):Texture{
         const base=new BaseTexture((selectTexture(detail.id)as Texture).textureCacheIds[1]);
         const selectedPortion= new Texture(base,new Rectangle(...detail.frame.frame));
-        console.log(selectedPortion);
         return selectedPortion;
     }
 }

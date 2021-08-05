@@ -36,8 +36,3 @@ console.log("loader",l.resources);
 console.log("texture",loadtexture(l.resources));
 xyz();
 }
-// xyz()=>,()=>{
-
-//     // console.log(selectTexture("i1"));
-//     this.image1=this.createSprite(selectTexture('i1') as Texture<Resource>,this.app.view.width/2,this.app.view.height/2);
-// }
