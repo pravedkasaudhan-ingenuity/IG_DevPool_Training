@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+canvas{
+    display: block;
+    margin: 0px auto;
+    /* width:99%; */
+    
+}
+#loader_bar{
+    border: 1px solid red;
+    /* height: 100px; */
+}
+#loading{
+    text-align: center;
+    /* position:absolute;
+    top:400px; */
+    /* left:10%; */
+    /* width: 80%; */
+    /* margin: 0px auto; */
+}

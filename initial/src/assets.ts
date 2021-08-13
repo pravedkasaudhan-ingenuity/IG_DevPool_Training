@@ -1,0 +1,38 @@
+export default{
+baseurl:"./assets/",
+data:[
+    {
+        key:"bg",
+        img:"preload/baseGame/Basegame_BG.jpg"
+    },
+    {
+        key:"loading",
+        img:"preload/baseGame/Splash_screen.png"
+    },
+    {
+        key:"logo",
+        img:"preload/baseGame/Logo.png"
+    },
+    {
+        key:"reel_bg",
+        img:"preload/baseGame/Basegame_Reel.png"
+    },
+    {
+        key:"symbols",
+        img:"preload/symbols/symbols.json"
+    },
+    {
+        key:"symbols_blur",
+        img:"preload/symbols/symbols_blur.json"
+    },
+    {
+        key:"buttons",
+        img:"preload/landscape/buttonPanel/buttonsMobile.json"
+    },
+    {
+        key:"payline",
+        img:"preload/payline/animated_paylines/static/Paylines_1_00008.png"
+    },
+  
+]
+}
