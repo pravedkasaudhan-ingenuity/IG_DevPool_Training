@@ -1,0 +1,108 @@
+{"frames": [
+
+{
+	"filename": "InfoButtonBack_Disable.png",
+	"frame": {"x":1,"y":1,"w":69,"h":95},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":69,"h":95},
+	"sourceSize": {"w":69,"h":95}
+},
+{
+	"filename": "InfoButtonBack_Down.png",
+	"frame": {"x":72,"y":1,"w":66,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":90},
+	"sourceSize": {"w":66,"h":90}
+},
+{
+	"filename": "InfoButtonBack_Normal.png",
+	"frame": {"x":1,"y":98,"w":69,"h":95},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":69,"h":95},
+	"sourceSize": {"w":69,"h":95}
+},
+{
+	"filename": "InfoButtonBack_Over.png",
+	"frame": {"x":1,"y":195,"w":69,"h":95},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":69,"h":95},
+	"sourceSize": {"w":69,"h":95}
+},
+{
+	"filename": "InfoButtonClose_Disable.png",
+	"frame": {"x":72,"y":185,"w":61,"h":61},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":61,"h":61},
+	"sourceSize": {"w":61,"h":61}
+},
+{
+	"filename": "InfoButtonClose_Down.png",
+	"frame": {"x":135,"y":185,"w":58,"h":58},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":58,"h":58},
+	"sourceSize": {"w":58,"h":58}
+},
+{
+	"filename": "InfoButtonClose_Normal.png",
+	"frame": {"x":72,"y":248,"w":61,"h":61},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":61,"h":61},
+	"sourceSize": {"w":61,"h":61}
+},
+{
+	"filename": "InfoButtonClose_Over.png",
+	"frame": {"x":72,"y":311,"w":61,"h":61},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":61,"h":61},
+	"sourceSize": {"w":61,"h":61}
+},
+{
+	"filename": "InfoButtonNext_Disable.png",
+	"frame": {"x":1,"y":389,"w":68,"h":95},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":68,"h":95},
+	"sourceSize": {"w":68,"h":95}
+},
+{
+	"filename": "InfoButtonNext_Down.png",
+	"frame": {"x":72,"y":93,"w":66,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":90},
+	"sourceSize": {"w":66,"h":90}
+},
+{
+	"filename": "InfoButtonNext_Normal.png",
+	"frame": {"x":1,"y":292,"w":69,"h":95},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":69,"h":95},
+	"sourceSize": {"w":69,"h":95}
+},
+{
+	"filename": "InfoButtonNext_Over.png",
+	"frame": {"x":71,"y":389,"w":67,"h":95},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":67,"h":95},
+	"sourceSize": {"w":67,"h":95}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "InfoButton_atlas.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:42dee651f66fa08539e01bf266d340f3:30e97104fbb5bd735a0ae5cad1348ae4:5f24fb8bafcb56148132e9fa14e5f40d$"
+}
+}
